@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignalVortex</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>🚀 SignalVortex</h1>
+    <p>Crypto Moves Fast. Catch the Pump Before it Hits.</p>
+    <nav>
+      <a href="https://t.me/signalvortex" target="_blank">Join Telegram</a>
+    </nav>
+  </header>
+
+  <section id="controls">
+    <button data-interval="1m">1m</button>
+    <button data-interval="5m">5m</button>
+    <button data-interval="24h">24h</button>
+    <label><input type="checkbox" id="lowcap"> &lt; $100k FDV</label>
+    <div id="chains">
+      <label><input type="checkbox" value="solana" checked> Solana</label>
+      <label><input type="checkbox" value="base" checked> Base</label>
+      <label><input type="checkbox" value="ethereum" checked> Ethereum</label>
+      <label><input type="checkbox" value="bsc" checked> BNB</label>
+    </div>
+    <button id="refresh">Refresh</button>
+  </section>
+
+  <main>
+    <div id="token-list">Loading live movers…</div>
+  </main>
+
+  <section id="digest">
+    <h2>24h Daily Digest</h2>
+    <button id="copyDigest">Copy for Telegram</button>
+    <textarea id="digestBox">Digest will appear after data loads.</textarea>
+  </section>
+
+  <footer>
+    <p>© SignalVortex • <a href="mailto:signalvortexdegen@gmail.com">signalvortexdegen@gmail.com</a></p>
+    <small>Sources: DexScreener API + public market data. Educational only, not financial advice.</small>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
