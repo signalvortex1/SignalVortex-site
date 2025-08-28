@@ -1,33 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SignalVortex - Live Movers</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignalVortex — Live Crypto Movers</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="SignalVortex scans Solana, Base, Ethereum and BNB for 1m/5m/24h movers. Low-cap filter, market cap, liquidity, supply, charts, and Telegram-ready digest." />
 </head>
+
 <body>
-  <header>
-    <h1>🚀 SignalVortex</h1>
-    <p>Catch the Pump Before It Hits</p>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">SV</div>
+      <div class="titles">
+        <h1>SignalVortex</h1>
+        <p>Crypto Moves Fast. Catch the Pump Before it Hits.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="https://t.me/SignalVortexDegen" target="_blank" rel="noopener">Join Telegram</a>
+    </div>
   </header>
 
-  <main>
-    <section id="controls">
-      <button onclick="loadMovers('1m')">1m</button>
-      <button onclick="loadMovers('5m')">5m</button>
-      <button onclick="loadMovers('24h')">24h</button>
+  <nav class="toolbar">
+    <div class="tabs">
+      <button class="tab active" data-tf="m1">1m</button>
+      <button class="tab" data-tf="m5">5m</button>
+      <button class="tab" data-tf="h24">24h</button>
+    </div>
+
+    <div class="filters">
+      <label class="toggle">
+        <input id="lowcapToggle" type="checkbox" />
+        <span class="tlabel">&lt; $100k FDV</span>
+      </label>
+
+      <div class="chains">
+        <label><input type="checkbox" class="chain" value="solana" checked/> Solana</label>
+        <label><input type="checkbox" class="chain" value="base" checked/> Base</label>
+        <label><input type="checkbox" class="chain" value="ethereum" checked/> Ethereum</label>
+        <label><input type="checkbox" class="chain" value="bsc" checked/> BNB</label>
+      </div>
+    </div>
+
+    <div class="refresh">
+      <button id="refreshBtn" class="btn">Refresh</button>
+      <span id="lastUpdate" class="muted">—</span>
+    </div>
+  </nav>
+
+  <main class="content">
+    <section id="cards" class="cards">
+      <div class="empty">Loading live movers…</div>
     </section>
 
-    <section id="movers">
-      <p>Loading top movers...</p>
+    <section class="digest">
+      <div class="digest-head">
+        <h2>24h Daily Digest</h2>
+        <button id="copyDigest" class="btn">Copy for Telegram</button>
+      </div>
+      <textarea id="digestText" rows="10" readonly>Digest will appear after data loads.</textarea>
     </section>
   </main>
 
-  <footer>
-    <p>Join us on <a href="https://t.me/signalvortexdegen" target="_blank">Telegram</a></p>
+  <footer class="footer">
+    <div>© <span id="y"></span> SignalVortex • <a href="mailto:signalvortexdegen@gmail.com">signalvortexdegen@gmail.com</a></div>
+    <div class="muted small">Sources: DexScreener API + public market data. Educational only, not financial advice.</div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
