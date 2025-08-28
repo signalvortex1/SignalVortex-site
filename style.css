@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  border-bottom: 2px solid #444;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #00ffcc;
+}
+
+#controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#controls button {
+  margin: 5px;
+  padding: 10px 20px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background: #00cc99;
+}
+
+#movers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.mover-card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+
+.mover-card h3 {
+  margin-top: 0;
+  color: #00ffcc;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid #444;
+  background: #111;
+}
