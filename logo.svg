@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="180" viewBox="0 0 600 180">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00e5c3"/><stop offset="1" stop-color="#4cc9f0"/></linearGradient></defs>
+  <rect width="600" height="180" rx="16" fill="#0b0f15"/>
+  <g transform="translate(28,28)"><rect x="0" y="0" width="124" height="124" rx="20" fill="url(#g)"/><text x="62" y="78" font-family="Verdana" font-size="48" font-weight="700" text-anchor="middle" fill="#021014">SV</text></g>
+  <text x="170" y="86" font-family="Inter" font-size="42" fill="#e6eef3" font-weight="700">SignalVortex</text>
+  <text x="170" y="118" font-family="Inter" font-size="14" fill="#9aa5b1">Crypto moves fast — catch the pump</text>
+</svg>
